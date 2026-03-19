@@ -39,15 +39,15 @@ export function Header() {
         <ul className="hidden md:flex items-center gap-10 text-sm tracking-wide">
           {[
             { label: "Главная", href: "#hero" },
-            { label: "Философия", href: "#about" },
-            { label: "Проекты", href: "#projects" },
-            { label: "Услуги", href: "#services" },
+            { label: "О компании", href: "#about" },
+            { label: "Каталог", href: "#projects" },
+            { label: "Партнёрам", href: "#services" },
             { label: "Вопросы", href: "#faq" },
           ].map((item) => (
             <li key={item.label}>
               <a
                 href={item.href}
-                className="hover:text-[rgb(251,146,60)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 hover:after:w-full after:bg-[rgb(251,146,60)] after:transition-all after:duration-300 text-white"
+                className="hover:text-[#C9A961] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 hover:after:w-full after:bg-[#C9A961] after:transition-all after:duration-300 text-white"
               >
                 {item.label}
               </a>
@@ -64,7 +64,7 @@ export function Header() {
               : "bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white",
           )}
         >
-          Связаться
+          Получить прайс
         </a>
 
         <button
@@ -96,15 +96,15 @@ export function Header() {
           <ul className="flex flex-col gap-6 mb-8">
             {[
               { label: "Главная", href: "#hero" },
-              { label: "Философия", href: "#about" },
-              { label: "Проекты", href: "#projects" },
-              { label: "Услуги", href: "#services" },
+              { label: "О компании", href: "#about" },
+              { label: "Каталог", href: "#projects" },
+              { label: "Партнёрам", href: "#services" },
               { label: "Вопросы", href: "#faq" },
             ].map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className="hover:text-[rgb(251,146,60)] transition-colors duration-300 text-white text-4xl font-light block"
+                  className="hover:text-[#C9A961] transition-colors duration-300 text-white text-4xl font-light block"
                   onClick={closeMobileMenu}
                 >
                   {item.label}
@@ -118,7 +118,7 @@ export function Header() {
             className="inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5 bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white transition-all duration-300 mb-4"
             onClick={closeMobileMenu}
           >
-            Связаться
+            Получить прайс
           </a>
         </div>
       </div>

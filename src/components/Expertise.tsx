@@ -1,30 +1,30 @@
 import { useEffect, useRef, useState } from "react"
-import { Home, Building, Armchair, Trees } from "lucide-react"
+import Icon from "@/components/ui/icon"
 import { HighlightedText } from "./HighlightedText"
 
-const expertiseAreas = [
+const partnerBenefits = [
   {
-    title: "Жилая архитектура",
-    description: "Создаем дома, которые сочетают красоту с комфортом, где каждое пространство служит и форме, и функции.",
-    icon: Home,
+    title: "Оптовые цены от 1 рулона",
+    description: "Никаких минимальных объёмов — оптовая цена с первого метра. Скидки до 25% при регулярных закупках и накопительная система лояльности для постоянных партнёров.",
+    icon: "Tag",
   },
   {
-    title: "Коммерческие объекты",
+    title: "Образцы бесплатно",
     description:
-      "Проектируем рабочие пространства, которые вдохновляют на продуктивность и отражают ценности передовых организаций.",
-    icon: Building,
+      "Отправляем коллекционные образцы тканей бесплатно для дизайнеров и салонов. Поможем подобрать ткань под проект клиента — просто опишите задачу.",
+    icon: "Package",
   },
   {
-    title: "Дизайн интерьеров",
+    title: "Кэшбэк для дизайнеров",
     description:
-      "Создаем интерьеры, которые гармонируют с архитектурной оболочкой, формируя целостный пространственный опыт.",
-    icon: Armchair,
+      "Специальная программа для дизайнеров интерьера: кэшбэк 7% от каждой закупки, персональный менеджер и приоритетная обработка заказов.",
+    icon: "Percent",
   },
   {
-    title: "Градостроительство",
+    title: "Гарантия наличия и сроков",
     description:
-      "Формируем сообщества через продуманную интеграцию общественных пространств, зданий и природных элементов.",
-    icon: Trees,
+      "Фиксируем цену на 30 дней после согласования. Гарантируем доставку в оговорённые сроки или возвращаем деньги. Ваша репутация — наша ответственность.",
+    icon: "ShieldCheck",
   },
 ]
 
@@ -57,44 +57,39 @@ export function Expertise() {
     <section id="services" ref={sectionRef} className="py-32 md:py-29">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-3xl mb-20">
-          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
+          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">B2B партнёрам</p>
           <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-            <HighlightedText>Экспертиза</HighlightedText>, отточенная
+            <HighlightedText>Условия</HighlightedText> для
             <br />
-            практикой
+            вашего бизнеса
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Каждый проект опирается на десятилетия совокупного опыта, создавая архитектуру, которая одновременно инновационна и вневременна.
+            Мы создаём партнёрские условия, которые помогают вашему бизнесу расти. Работаем с салонами штор, ателье, дизайнерами и закупщиками отелей и ЖК.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
-          {expertiseAreas.map((area, index) => {
-            const Icon = area.icon
+          {partnerBenefits.map((benefit, index) => {
             return (
               <div
-                key={area.title}
+                key={benefit.title}
                 ref={(el) => {
                   itemRefs.current[index] = el
                 }}
                 data-index={index}
-                className={`relative pl-8 border-l border-border transition-all duration-700 ${
+                className={`relative pl-8 border-l-2 transition-all duration-700 ${
                   visibleItems.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                style={{
+                  transitionDelay: `${index * 150}ms`,
+                  borderColor: "#C9A961",
+                }}
               >
-                <div
-                  className={`transition-all duration-1000 ${
-                    visibleItems.includes(index) ? "animate-draw-stroke" : ""
-                  }`}
-                  style={{
-                    transitionDelay: `${index * 150}ms`,
-                  }}
-                >
-                  <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
+                <div className="mb-4">
+                  <Icon name={benefit.icon as "Tag"} size={40} className="text-foreground" />
                 </div>
-                <h3 className="text-xl font-medium mb-4">{area.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{area.description}</p>
+                <h3 className="text-xl font-medium mb-4">{benefit.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
               </div>
             )
           })}
