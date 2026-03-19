@@ -8,7 +8,7 @@ const products = [
     category: "Портьерные ткани",
     location: "от 890 ₽/мп · В наличии",
     year: "Хит",
-    image: "/images/hously-1.png",
+    image: "https://cdn.poehali.dev/projects/812e46a0-f3fe-4b25-844a-8c8adadc8f79/files/338a3bb9-7ebe-4995-b3b8-0c35ca252738.jpg",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const products = [
     category: "Светозащитные ткани",
     location: "от 650 ₽/мп · В наличии",
     year: "Топ",
-    image: "/images/hously-2.png",
+    image: "https://cdn.poehali.dev/projects/812e46a0-f3fe-4b25-844a-8c8adadc8f79/files/81a7d1c1-e493-4c74-a033-6de59215d393.jpg",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const products = [
     category: "Натуральные ткани",
     location: "от 1 200 ₽/мп · В наличии",
     year: "Новинка",
-    image: "/images/hously-3.png",
+    image: "https://cdn.poehali.dev/projects/812e46a0-f3fe-4b25-844a-8c8adadc8f79/files/ff63f2b0-c8fa-4c93-8107-f9e121b66302.jpg",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const products = [
     category: "Премиум коллекция",
     location: "от 1 450 ₽/мп · Под заказ",
     year: "Премиум",
-    image: "/images/hously-4.png",
+    image: "https://cdn.poehali.dev/projects/812e46a0-f3fe-4b25-844a-8c8adadc8f79/files/a4582089-6a5a-4d43-b7e9-01714d372ab2.jpg",
   },
 ]
 
